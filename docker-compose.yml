@@ -10,7 +10,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: mduser
       MONGO_INITDB_ROOT_PASSWORD: mdtestpass
   app:
-    build: .
+    image: "ghcr.io/sysnote8main/ticketbot:release"
+    restart: always
     environment:
       BOT_PREFIX: ${BOT_PREFIX}
       BOT_TOKEN: ${BOT_TOKEN}
