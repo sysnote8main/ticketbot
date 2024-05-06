@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ticketbot"
+version = "0.1.0"
+description = ""
+authors = ["sysnote8main <sysnote8main@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+"discord.py" = "^2.3.2"
+python-dotenv = "^1.0.1"
+emoji = "^2.11.1"
+motor = "^3.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

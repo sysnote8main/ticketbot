@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 50016:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mduser
+      MONGO_INITDB_ROOT_PASSWORD: mdtestpass
+  app:
+    build: .
+    environment:
+      BOT_PREFIX: ${BOT_PREFIX}
+      BOT_TOKEN: ${BOT_TOKEN}
+      BOT_OWNER_ID: ${BOT_OWNER_ID}
+      BOT_GUILD_ID: ${BOT_GUILD_ID}
+      MONGO_URL: ${MONGO_URL}
